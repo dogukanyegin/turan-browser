@@ -1,0 +1,5 @@
+# Recorded from the Windows 11 x64 final Beta 1 PowerShell acceptance log.
+# Only for original tested files in the Windows dist directory.
+065c3c0eaa5ef556ffab8fc74e1b9fa3101a8b36f0652c6f0b604c4e3e9af50c  TuranBrowser-0.9.0-beta.1-windows-x64-setup.exe
+0f515258cd9583b40200ebe611455398af45b4e7ff436a6cb2dcd82fc3bc4241  TuranBrowser-0.9.0-beta.1-windows-x64-portable.zip
+db23f34307b2b0467e32bee178e67fbbab1ab77530f441836b7beaa56ae8d65c  TuranBrowser-0.9.0-beta.1-source.zip
