@@ -1,0 +1,9 @@
+# Turan curated starter domain rules. These are domain rules, not ABP syntax.
+doubleclick.net
+googlesyndication.com
+google-analytics.com
+googletagmanager.com
+adnxs.com
+scorecardresearch.com
+connect.facebook.net
+ads.example

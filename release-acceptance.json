@@ -1,0 +1,150 @@
+{
+  "criteria": [
+    {
+      "id": "current-engine",
+      "status": "passed",
+      "evidence": "cef.lock.json; artifacts/cef-integration.txt"
+    },
+    {
+      "id": "sandbox-baseline",
+      "status": "passed",
+      "evidence": "artifacts/cef-integration.txt"
+    },
+    {
+      "id": "history-bookmarks-downloads",
+      "status": "passed",
+      "evidence": "artifacts/cef-integration.txt; artifacts/session-cef.txt"
+    },
+    {
+      "id": "persistent-download-history",
+      "status": "passed",
+      "evidence": "artifacts/cef-integration.txt; actual download manager restart and private metadata exclusion"
+    },
+    {
+      "id": "native-save-dialog-and-printer-workflow",
+      "status": "pending",
+      "evidence": "artifacts/navigation-native-save-dialog-failure.json"
+    },
+    {
+      "id": "session-recovery",
+      "status": "passed",
+      "evidence": "artifacts/session-cef.txt"
+    },
+    {
+      "id": "multi-window-profile-isolation",
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "password-manager",
+      "status": "pending",
+      "evidence": "Supported explicit main-HTTPS form workflow and encrypted profile vault pass both CEF runtimes: artifacts/password-vault-cef-default.json; artifacts/password-vault-cef-integrated.json; turan_vault CTest. Broader form coverage/automatic save prompts and physical lock/suspend acceptance remain pending.",
+      "required_for_stable": false
+    },
+    {
+      "id": "extension-window-topology",
+      "status": "failed",
+      "evidence": "Production default Alloy remains unchanged. New chrome-integrated unmodified top-level normal frame passes real sharedtabs, windows.update focus, cross-window moves and close semantics: artifacts/integrated-chrome-cef.json. Final custom UI, engine session metadata and private-extension contracts remain pending. Older reparented focus failures retained."
+    },
+    {
+      "id": "mv3-real-extensions-and-management",
+      "status": "pending",
+      "evidence": "Integrated publisher uBOL/DarkReader/Bitwarden logged-out/action operations pass. Real native unpacked installation, permissions, separate toolbar pin/incognito grant-revoke, disable-enable, version reload and native removal consent/readback pass: artifacts/extensions-lifecycle-cef.json. Earlier combined incognito-reload/pin and consent QA failures preserved and repaired. Store/CRX/automatic extension updates and authenticated Bitwarden vault remain pending."
+    },
+    {
+      "id": "shield-abp-cosmetics-subscriptions",
+      "status": "pending",
+      "evidence": "Actual native/live HTTPS subscriptions and both CEF runtimes pass: artifacts/subscriptions-cef-alloy.json; artifacts/subscriptions-cef-chrome-integrated.json. Bounded ABP subset skips3911unsupported309invalid official rules. StrictCSP/procedural/scriptlets/fullABP remain pending."
+    },
+    {
+      "id": "persistent-site-permissions",
+      "status": "passed",
+      "evidence": "artifacts/permissions-cef.json; fake-media live stream and revocation; normal persistence, private isolation and main/subframe cancellation; physical hardware and screen sharing pending"
+    },
+    {
+      "id": "authenticated-update-rollback",
+      "status": "pending",
+      "evidence": "17native groups, fixedinventory/RSA-PSS/SHA256 and6realtermination recovery pass; artifacts/update-native-integration.json; artifacts/update-panel-cef.json. Production publisher key/endpoint, CEF-free bootstrap recovery, newengine health rollback/retention/registration remain pending. Scope change: network update is explicitly disabled in the unprovisioned 1.0.0 release; separate offline fail-closed gate required.",
+      "required_for_stable": false
+    },
+    {
+      "id": "network-and-security-test-suite",
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "windows10-and-windows11-package-tests",
+      "status": "pending",
+      "evidence": " Scope change: Windows 11 x64 only in release-scope.json; Windows 10 support is NOT advertised.",
+      "required_for_stable": false
+    },
+    {
+      "id": "performance-stability-accessibility",
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "no-unresolved-critical-or-high-security-findings",
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "physical-media-screen-sharing-and-notification-delivery",
+      "status": "pending",
+      "evidence": ""
+    },
+    {
+      "id": "full-profile-backup-and-engine-migration",
+      "status": "passed",
+      "evidence": "artifacts/profile-migration-cef.json; turan_profile CTest; Windows 11 isolated complete snapshots and actual CEF 144 -> 154 -> restored 144 persistent cookies/localStorage; retained previous profile; live/tamper/downgrade refusal and crash handoff; Windows 10, cross-account and power-loss validation pending; newer attempted-engine refusal and real failed successful-marker write retains the engine bound"
+    },
+    {
+      "id": "startup-regression-investigation",
+      "status": "pending",
+      "evidence": "artifacts/performance-comparison.json; packaged PERFORMANCE_REPORT.md and exact DLL-matching paired samples in build-manifest.json; earlier 7.172s first launch remains unexplained, small later pairs do not close investigation"
+    },
+    {
+      "id": "shield-tested-network-cosmetic-subset",
+      "status": "passed",
+      "evidence": "artifacts/shield-cef.json; artifacts/filter-corpus.json; turan_filter CTest; scope is bounded ABP subset, not full syntax/subscription acceptance"
+    },
+    {
+      "id": "external-official-tor-browser-launch",
+      "status": "passed",
+      "evidence": "artifacts/tor-browser-full-cef.json; turan_tor CTest; real normal/private external windows for authenticated catalog 15.0.24 only. Different/updated versions need renewal; routing/anonymity is outside launcher acceptance."
+    },
+    {
+      "id": "separate-tor-connectivity-isolation",
+      "status": "pending",
+      "evidence": "docs/TOR_ARCHITECTURE.md; no Turan SOCKS/Tor mode is implemented or exposed. Bootstrap/.onion/DNS/WebRTC/IPv6/fail-closed isolation remains pending.",
+      "required_for_stable": false
+    },
+    {
+      "id": "encrypted-vault-supported-explicit-forms",
+      "status": "passed",
+      "evidence": "artifacts/password-vault-cef-default.json; artifacts/password-vault-cef-integrated.json; turan_vault"
+    },
+    {
+      "id": "optional-validated-filter-subscriptions",
+      "status": "passed",
+      "evidence": "artifacts/subscriptions-cef-alloy.json; artifacts/subscriptions-cef-chrome-integrated.json; turan_subscription"
+    },
+    {
+      "id": "authenticated-update-transaction-fixtures",
+      "status": "passed",
+      "evidence": "artifacts/update-native-integration.json; turan_update; limited fixture scope, not production publication acceptance"
+    },
+    {
+      "id": "windows11-x64-package-acceptance",
+      "status": "pending",
+      "evidence": "",
+      "required_for_stable": true
+    },
+    {
+      "id": "offline-updater-fail-closed",
+      "status": "pending",
+      "evidence": "",
+      "required_for_stable": true
+    }
+  ]
+}

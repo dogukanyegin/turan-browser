@@ -1,0 +1,30 @@
+{
+  "re2": {
+    "version": "2025-11-05",
+    "source": "google/re2",
+    "url": "https://codeload.github.com/google/re2/tar.gz/refs/tags/2025-11-05",
+    "sha256": "87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67",
+    "archive": "re2-2025-11-05.tar.gz",
+    "folder": "re2-2025-11-05",
+    "size": 397504,
+    "skippedLinks": [
+      "re2-2025-11-05/python/LICENSE"
+    ]
+  },
+  "abseil": {
+    "version": "20260817.0",
+    "source": "abseil/abseil-cpp",
+    "url": "https://codeload.github.com/abseil/abseil-cpp/tar.gz/refs/tags/20260817.0",
+    "sha256": "f7e05179df39c45434cad433f5783840bb3788ef322976f9138bc6b72b3a107d",
+    "archive": "abseil-20260817.0.tar.gz",
+    "folder": "abseil-cpp-20260817.0",
+    "size": 2430876,
+    "skippedLinks": []
+  },
+  "publicSuffix": {
+    "commit": "3929462652695bad04f0a27afb600974014a3c8b",
+    "url": "https://raw.githubusercontent.com/publicsuffix/list/3929462652695bad04f0a27afb600974014a3c8b/public_suffix_list.dat",
+    "sha256": "2919eb9803c91a3f73a507cc6fedc934de005543c22c4016f72e3343de5dd6e7",
+    "size": 335389
+  }
+}

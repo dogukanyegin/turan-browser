@@ -1,0 +1,11 @@
+{
+  "version": "15.0.24",
+  "package_url": "https://dist.torproject.org/torbrowser/15.0.24/tor-browser-windows-x86_64-portable-15.0.24.exe",
+  "package_sha256": "a549824c31dd9ee8143ecc6bc97b8f2d5fd5cba8b13f528f1444a0b769758c6c",
+  "package_bytes": 113598232,
+  "primary_fingerprint": "EF6E286DDA85EA2A4BA7DE684E2C6E8793298290",
+  "signing_subkey": "022DA248432D2A0E0F54E65E316C1FACD62D07D9",
+  "key_url": "https://openpgpkey.torproject.org/.well-known/openpgpkey/torproject.org/hu/kounek7zrdx745qydx6p59t9mqjpuhdf",
+  "verification_instructions": "https://support.torproject.org/tor-browser/getting-started/verifying-tor-browser/",
+  "scope": "External browser code identity for Open in Tor Browser; package and profile are not redistributed, configured or modified by Turan."
+}

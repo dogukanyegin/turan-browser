@@ -1,0 +1,1390 @@
+{
+  "release": {
+    "version": "0.9.0-beta.1",
+    "major": 0,
+    "minor": 9,
+    "patch": 0,
+    "revision": 1,
+    "channel": "beta",
+    "stable": false,
+    "release_scope": "win11-x64-offline-updates-v1"
+  },
+  "engine": "154.0.34+g14c5a08+chromium-154.0.8037.98",
+  "source_sha256": "7acd2243434c66353ba44d097a976f18cbce93d3c28ee539701d19d555d938ae",
+  "verification": {
+    "scope": "Windows 11 x64 engineering tests; incomplete Stable acceptance",
+    "core_ctest": [
+      "turan_core",
+      "turan_session",
+      "turan_store",
+      "turan_profile",
+      "turan_filter",
+      "turan_tor",
+      "turan_vault",
+      "turan_subscription",
+      "turan_update"
+    ],
+    "cef_fixture": [
+      "CEF_RENDER_JS_OK",
+      "SANDBOX_BOOTSTRAP_OK",
+      "PRIVATE_COOKIE_ISOLATION_OK",
+      "NORMAL_COOKIE_CONTEXT_OK",
+      "DOWNLOAD_OK",
+      "SHIELD_REQUEST_BLOCK_OK",
+      "TABS=3",
+      "PROFILE_PERSISTENCE_OK",
+      "PRIVATE_HISTORY_EXCLUSION_OK",
+      "PRIVATE_DOWNLOAD_METADATA_EXCLUSION_OK",
+      "DOWNLOAD_HISTORY_RESTART_OK"
+    ],
+    "session_fixture": "PASS real CEF clean restart, killed-process recovery, corrupted journal backup, closed-tab reopen, native drag reorder, pin/mute/group persistence, private history/session exclusion, legacy bookmark/history preservation, metadata backup recovery and rejected-file preservation, invalid metadata startup refusal without overwrites",
+    "profile_migration_fixture": {
+      "status": "not_tested",
+      "reason": "Immutable 0.1.0 baseline archive unavailable"
+    },
+    "shield_fixture": {
+      "scope": "Win11 actual Alloy CEF; bounded ABP subset, no subscription acceptance",
+      "scopedGenericExceptionHasAndDynamicCosmetics": true,
+      "maliciousCssCannotInitiateRequest": true,
+      "allowedResult": true,
+      "realNetworkTypesExceptionsAndNegativeControls": [
+        "/allowed",
+        "/data-type-negative"
+      ],
+      "actualBlockedEventCount": 3,
+      "actualOversizedExceptionUrlBlockedByBudget": true,
+      "siteExceptionNativeToggleRestartAndReenable": true,
+      "asyncNativeEditorRejectRetainAndAtomicBackupApply": true,
+      "subframeDocumentScopeAndTopNegativeControl": true,
+      "actualPslSiblingCookiesAndPrivateSuffixBoundary": true,
+      "privateEventAndSiteExceptionIsolation": true,
+      "strictCspCosmeticLimitation": "style-src none blocks injected styles; no CSP bypass claimed",
+      "passed": true
+    },
+    "filter_corpus": {
+      "scope": "Compilation and synthetic request timing only; partial ABP syntax, no publisher list enabled in application",
+      "sources": {
+        "commit": "a494fcbca03b60c89ccd0c3e989bc9a1d38e93f0",
+        "capturedUtc": "2026-10-10T22:10:33.092099+00:00",
+        "scope": "QA only, not shipped or activated",
+        "lists": {
+          "easylist": {
+            "url": "https://raw.githubusercontent.com/easylist/easylist/a494fcbca03b60c89ccd0c3e989bc9a1d38e93f0/easylist.txt",
+            "sha256": "4f84875522d346167dd9805368894da6e2010af8d868e5354090c9df720d0e53",
+            "size": 2131804,
+            "license": "GPL-3.0-or-later OR CC-BY-SA-3.0-or-later",
+            "licenseUrl": "https://easylist.to/pages/licence.html"
+          },
+          "easyprivacy": {
+            "url": "https://raw.githubusercontent.com/easylist/easylist/a494fcbca03b60c89ccd0c3e989bc9a1d38e93f0/easyprivacy.txt",
+            "sha256": "1f891d48822871ec83315099cd592aba489f939bc69c4f14605edbe969207189",
+            "size": 1508816,
+            "license": "GPL-3.0-or-later OR CC-BY-SA-3.0-or-later",
+            "licenseUrl": "https://easylist.to/pages/licence.html"
+          }
+        }
+      },
+      "exitCode": 0,
+      "diagnostics": [
+        "EasyList QA:161:Invalid pattern anchor",
+        "EasyList QA:162:Invalid pattern anchor",
+        "EasyList QA:167:Invalid pattern anchor",
+        "EasyList QA:830:Unsupported option: document",
+        "EasyList QA:834:Unsupported option: document",
+        "EasyList QA:839:Unsupported option: document",
+        "EasyList QA:912:Unsupported option: popup",
+        "EasyList QA:1003:Unsupported option: document",
+        "EasyList QA:1004:Unsupported option: document",
+        "EasyList QA:1005:Unsupported option: document",
+        "EasyList QA:1006:Unsupported option: document",
+        "EasyList QA:1007:Unsupported option: document",
+        "EasyList QA:1314:Unsupported option: popup",
+        "EasyList QA:1315:Unsupported option: popup",
+        "EasyList QA:1316:Unsupported option: popup",
+        "EasyList QA:1317:Unsupported option: popup",
+        "EasyList QA:1318:Unsupported option: popup",
+        "EasyList QA:1319:Unsupported option: popup",
+        "EasyList QA:1320:Unsupported option: popup",
+        "EasyList QA:1321:Unsupported option: popup",
+        "EasyList QA:1322:Unsupported option: popup",
+        "EasyList QA:1323:Unsupported option: popup",
+        "EasyList QA:1324:Unsupported option: popup",
+        "EasyList QA:1325:Unsupported option: popup",
+        "EasyList QA:1326:Unsupported option: popup",
+        "EasyList QA:1327:Unsupported option: popup",
+        "EasyList QA:1328:Unsupported option: popup",
+        "EasyList QA:1329:Unsupported option: popup",
+        "EasyList QA:1330:Unsupported option: popup",
+        "EasyList QA:1331:Unsupported option: popup",
+        "EasyList QA:1332:Unsupported option: popup",
+        "EasyList QA:1333:Unsupported option: popup",
+        "EasyList QA:1334:Unsupported option: popup",
+        "EasyList QA:1335:Unsupported option: popup",
+        "EasyList QA:1336:Unsupported option: popup",
+        "EasyList QA:1337:Unsupported option: popup",
+        "EasyList QA:1338:Unsupported option: popup",
+        "EasyList QA:1339:Unsupported option: popup",
+        "EasyList QA:1340:Unsupported option: popup",
+        "EasyList QA:1341:Unsupported option: popup",
+        "EasyList QA:1342:Unsupported option: popup",
+        "EasyList QA:1343:Unsupported option: popup",
+        "EasyList QA:1344:Unsupported option: popup",
+        "EasyList QA:1345:Unsupported option: popup",
+        "EasyList QA:1346:Unsupported option: popup",
+        "EasyList QA:1347:Unsupported option: popup",
+        "EasyList QA:1348:Unsupported option: popup",
+        "EasyList QA:1349:Unsupported option: popup",
+        "EasyList QA:1350:Unsupported option: popup",
+        "EasyList QA:1351:Unsupported option: popup",
+        "EasyList QA:1352:Unsupported option: popup",
+        "EasyList QA:1353:Unsupported option: popup",
+        "EasyList QA:1354:Unsupported option: popup",
+        "EasyList QA:1355:Unsupported option: popup",
+        "EasyList QA:1356:Unsupported option: popup",
+        "EasyList QA:1357:Unsupported option: popup",
+        "EasyList QA:1358:Unsupported option: popup",
+        "EasyList QA:1359:Unsupported option: popup",
+        "EasyList QA:1360:Unsupported option: popup",
+        "EasyList QA:1361:Unsupported option: popup",
+        "EasyList QA:1362:Unsupported option: popup",
+        "EasyList QA:1363:Unsupported option: popup",
+        "EasyList QA:1364:Unsupported option: popup",
+        "EasyList QA:1365:Unsupported option: popup",
+        "EasyList QA:1366:Unsupported option: popup",
+        "EasyList QA:1367:Unsupported option: popup",
+        "EasyList QA:1368:Unsupported option: popup",
+        "EasyList QA:1369:Unsupported option: popup",
+        "EasyList QA:1370:Unsupported option: popup",
+        "EasyList QA:1371:Unsupported option: popup",
+        "EasyList QA:1372:Unsupported option: popup",
+        "EasyList QA:1373:Unsupported option: popup",
+        "EasyList QA:1374:Unsupported option: popup",
+        "EasyList QA:1375:Unsupported option: popup",
+        "EasyList QA:1376:Unsupported option: popup",
+        "EasyList QA:1377:Unsupported option: popup",
+        "EasyList QA:1378:Unsupported option: popup",
+        "EasyList QA:1379:Unsupported option: popup",
+        "EasyList QA:1381:Unsupported option: popup",
+        "EasyList QA:1382:Unsupported option: popup",
+        "EasyList QA:1384:Unsupported option: popup",
+        "EasyList QA:1385:Unsupported option: popup",
+        "EasyList QA:60666:Unsupported option: document",
+        "EasyList QA:60667:Unsupported option: document",
+        "EasyList QA:60668:Unsupported option: document",
+        "EasyList QA:60669:Unsupported option: document",
+        "EasyList QA:60670:Unsupported option: document",
+        "EasyList QA:60671:Unsupported option: document",
+        "EasyList QA:60672:Unsupported option: document",
+        "EasyList QA:60673:Unsupported option: document",
+        "EasyList QA:60674:Unsupported option: document",
+        "EasyList QA:60675:Unsupported option: document",
+        "EasyList QA:60676:Unsupported option: document",
+        "EasyList QA:60677:Unsupported option: document",
+        "EasyList QA:60678:Unsupported option: document",
+        "EasyList QA:60679:Unsupported option: document",
+        "EasyList QA:60680:Unsupported option: document",
+        "EasyList QA:60681:Unsupported option: document",
+        "EasyList QA:60682:Unsupported option: document",
+        "EasyList QA:60683:Unsupported option: document"
+      ],
+      "network": 109006,
+      "cosmetic": 24072,
+      "unsupported": 3906,
+      "invalid": 309,
+      "disabled": 0,
+      "compileMs": 5736.44,
+      "sampleRequests": 1000,
+      "blockedSamples": 500,
+      "medianMatchUs": 93.6,
+      "p95MatchUs": 109.0,
+      "peakPrivateCommitMiB": 436.48,
+      "peakWorkingSetMiB": 421.234,
+      "stderr": ""
+    },
+    "native_filter_dependencies": {
+      "re2": {
+        "version": "2025-11-05",
+        "source": "google/re2",
+        "url": "https://codeload.github.com/google/re2/tar.gz/refs/tags/2025-11-05",
+        "sha256": "87f6029d2f6de8aa023654240a03ada90e876ce9a4676e258dd01ea4c26ffd67",
+        "archive": "re2-2025-11-05.tar.gz",
+        "folder": "re2-2025-11-05",
+        "size": 397504,
+        "skippedLinks": [
+          "re2-2025-11-05/python/LICENSE"
+        ]
+      },
+      "abseil": {
+        "version": "20260817.0",
+        "source": "abseil/abseil-cpp",
+        "url": "https://codeload.github.com/abseil/abseil-cpp/tar.gz/refs/tags/20260817.0",
+        "sha256": "f7e05179df39c45434cad433f5783840bb3788ef322976f9138bc6b72b3a107d",
+        "archive": "abseil-20260817.0.tar.gz",
+        "folder": "abseil-cpp-20260817.0",
+        "size": 2430876,
+        "skippedLinks": []
+      },
+      "publicSuffix": {
+        "commit": "3929462652695bad04f0a27afb600974014a3c8b",
+        "url": "https://raw.githubusercontent.com/publicsuffix/list/3929462652695bad04f0a27afb600974014a3c8b/public_suffix_list.dat",
+        "sha256": "2919eb9803c91a3f73a507cc6fedc934de005543c22c4016f72e3343de5dd6e7",
+        "size": 335389
+      }
+    },
+    "tor_browser_catalog": {
+      "version": "15.0.24",
+      "package_url": "https://dist.torproject.org/torbrowser/15.0.24/tor-browser-windows-x86_64-portable-15.0.24.exe",
+      "package_sha256": "a549824c31dd9ee8143ecc6bc97b8f2d5fd5cba8b13f528f1444a0b769758c6c",
+      "package_bytes": 113598232,
+      "primary_fingerprint": "EF6E286DDA85EA2A4BA7DE684E2C6E8793298290",
+      "signing_subkey": "022DA248432D2A0E0F54E65E316C1FACD62D07D9",
+      "key_url": "https://openpgpkey.torproject.org/.well-known/openpgpkey/torproject.org/hu/kounek7zrdx745qydx6p59t9mqjpuhdf",
+      "verification_instructions": "https://support.torproject.org/tor-browser/getting-started/verifying-tor-browser/",
+      "scope": "External browser code identity for Open in Tor Browser; package and profile are not redistributed, configured or modified by Turan."
+    },
+    "tor_browser_refusal_fixture": {
+      "scope": "Windows 11 native CEF controls and external-process launch; Tor connection/leak/anonymity acceptance is not covered",
+      "dllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "passed": true,
+      "nativeMissingInstallationRefused": true,
+      "internalUrlLaunchDisabled": true,
+      "legacyDataPreserved": true
+    },
+    "permission_fixture": {
+      "hardwareScope": "Chromium fake media device; no physical microphone/camera capture",
+      "os": "Windows 11 x64",
+      "lastPromptChoice": 71,
+      "lastRendererResult": "1",
+      "nativeConsentAndPersistentMicrophoneRule": true,
+      "revokingMicrophoneStopsExistingCapture": true,
+      "siteManagerBlockReachesEngine": true,
+      "siteManagerAskResetsEngine": true,
+      "privateConsentIsSeparateAndForgottenAfterLastPrivateTab": true,
+      "normalConsentSurvivesRestart": true,
+      "cameraConsentAndRevocation": true,
+      "notificationConsentAndEngineRevocation": true,
+      "geolocationDenial": true,
+      "geolocationManagerAllowAndResetWithoutReadingPosition": true,
+      "clipboardPermissionDenialWithoutReadingClipboard": true,
+      "clipboardManagerAllowAndResetWithoutReadingClipboard": true,
+      "navigationCancelsPendingPrompt": true,
+      "subframeNavigationCancelsMediaConsentWithoutPersistingIt": true,
+      "cleanExit": true
+    },
+    "tls_fixture": {
+      "scope": "local untrusted self-signed certificate only; no trust-store changes",
+      "certificateError": "net::ERR_CERT_AUTHORITY_INVALID",
+      "httpsDocumentNeverRequested": true,
+      "httpNavigationRecoversAfterCertificateRejection": true,
+      "cleanExit": true
+    },
+    "dns_fixture": {
+      "off": {
+        "httpsAttempts": 0,
+        "classicAttempts": 4,
+        "httpsResponses": 0,
+        "passed": true
+      },
+      "secure": {
+        "httpsAttempts": 2,
+        "classicAttempts": 0,
+        "httpsResponses": 2,
+        "passed": true
+      },
+      "secure-provider-unavailable": {
+        "httpsAttempts": 4,
+        "classicAttempts": 0,
+        "httpsResponses": 0,
+        "passed": true
+      }
+    },
+    "third_party_extension_probe": {
+      "uBOL": {
+        "version": "2026.1006.1931",
+        "actualAdRequestBlocked": true,
+        "requestReachedServer": false,
+        "actionPopupOpened": true,
+        "engineDisable": true,
+        "adRequestSucceedsWhenDisabled": true,
+        "disabledRequestReachedServer": true,
+        "engineEnable": true
+      },
+      "DarkReader": {
+        "version": "4.9.133",
+        "dynamicStyleInjected": true,
+        "actionPopupOpened": true,
+        "engineDisable": true,
+        "engineEnable": true
+      },
+      "Bitwarden": {
+        "version": "2026.9.3",
+        "onboardingSkipped": false,
+        "onboardingReady": true,
+        "actionPopupOpened": true,
+        "loggedOutUI": true,
+        "engineDisable": true,
+        "engineEnable": true
+      }
+    },
+    "native_host_publisher_probe": {
+      "uBOL": {
+        "version": "2026.1006.1931",
+        "scope": "native root activation and specific publisher operations; no vault/autofill acceptance",
+        "actualAdRequestBlocked": true,
+        "requestReachedServer": false,
+        "nativeForegroundRequestAccepted": false,
+        "actionPopupOpened": true,
+        "engineDisable": true,
+        "adRequestSucceedsWhenDisabled": true,
+        "disabledRequestReachedServer": true,
+        "engineEnable": true
+      },
+      "DarkReader": {
+        "version": "4.9.133",
+        "scope": "native root activation and specific publisher operations; no vault/autofill acceptance",
+        "dynamicStyleInjected": true,
+        "nativeForegroundRequestAccepted": false,
+        "actionPopupOpened": true,
+        "engineDisable": true,
+        "engineEnable": true
+      },
+      "Bitwarden": {
+        "version": "2026.9.3",
+        "scope": "native root activation and specific publisher operations; no vault/autofill acceptance",
+        "nativeForegroundRequestAccepted": true,
+        "onboardingSkipped": true,
+        "onboardingReady": true,
+        "actionPopupOpened": true,
+        "loggedOutUI": true,
+        "engineDisable": true,
+        "engineEnable": true
+      }
+    },
+    "native_chrome_host_probe": {
+      "runtime": "chrome-reparent-tabs",
+      "scope": "opt-in same-thread HWND adapter; stock engine controls retained",
+      "nativeOwnership": true,
+      "minimizeRestore": true,
+      "rendererTextInput": true,
+      "nativeFullscreen": true,
+      "nativeSelectionReachesEngine": true,
+      "extensionCreatedTabRegistered": true,
+      "engineActivationMatchesNative": true,
+      "closeOneRetainsSharedFrame": true,
+      "engineReportsFocused": true,
+      "automaticWindowFocusAcceptance": "passed in this observation",
+      "privateEditEnabledBeforeWait": false,
+      "privateCookieAndStorageIsolated": true,
+      "privateValuesAbsentFromNormal": true,
+      "noSeparateVisibleEngineRoot": true,
+      "exitCode": 0,
+      "privateHistoryAbsent": true
+    },
+    "diagnostic_guard_fixture": [
+      {
+        "arguments": [
+          "--turan-runtime"
+        ],
+        "exitCode": 2,
+        "noProfileCreated": true,
+        "noProfileLeaseOrRecoveryFiles": true
+      },
+      {
+        "arguments": [
+          "--turan-runtime"
+        ],
+        "exitCode": 2,
+        "noProfileCreated": true,
+        "noProfileLeaseOrRecoveryFiles": true
+      },
+      {
+        "arguments": [
+          "--turan-runtime",
+          "--profile"
+        ],
+        "exitCode": 2,
+        "noProfileCreated": true,
+        "noProfileLeaseOrRecoveryFiles": true
+      },
+      {
+        "arguments": [
+          "--turan-test-dns",
+          "--profile",
+          "--url"
+        ],
+        "exitCode": 2,
+        "noProfileCreated": true,
+        "noProfileLeaseOrRecoveryFiles": true
+      },
+      {
+        "arguments": [
+          "--turan-test-file-dialog",
+          "--profile",
+          "--url"
+        ],
+        "exitCode": 2,
+        "noProfileCreated": true,
+        "noProfileLeaseOrRecoveryFiles": true
+      }
+    ],
+    "mv3_probe_operations": {
+      "runtime": true,
+      "serviceWorker": true,
+      "storage": true,
+      "tabs": true,
+      "windows": true,
+      "scripting": true,
+      "contextMenus": true,
+      "alarms": true,
+      "notifications": true,
+      "permissions": true,
+      "webNavigation": true,
+      "declarativeNetRequest": true,
+      "dnrEnforcement": true
+    },
+    "performance_comparison": {
+      "status": "not_tested",
+      "reason": "Immutable 0.1.0 baseline archive unavailable",
+      "currentDllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd"
+    },
+    "integrated_chrome_candidate": {
+      "runtime": "chrome-integrated",
+      "scope": "normal native Chromium window with Turan native panels; custom toolbar acceptance remains separate",
+      "binarySha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "oneVisibleRoot": true,
+      "unmodifiedRootStyle": true,
+      "initialTopology": [
+        {
+          "alwaysOnTop": false,
+          "focused": true,
+          "height": 982,
+          "id": 42152725,
+          "incognito": false,
+          "left": 10,
+          "state": "normal",
+          "tabs": [
+            {
+              "active": true,
+              "audible": false,
+              "autoDiscardable": true,
+              "discarded": false,
+              "frozen": false,
+              "groupId": -1,
+              "height": 887,
+              "highlighted": true,
+              "id": 42152726,
+              "incognito": false,
+              "index": 0,
+              "lastAccessed": 1791756787932.519,
+              "mutedInfo": {
+                "muted": false
+              },
+              "pinned": false,
+              "selected": true,
+              "splitViewId": -1,
+              "status": "complete",
+              "title": "MV3_PROBE_REPORTED",
+              "url": "http://127.0.0.1:59566/first",
+              "width": 1034,
+              "windowId": 42152725
+            }
+          ],
+          "top": 10,
+          "type": "normal",
+          "width": 1050
+        }
+      ],
+      "threeTabsOneWindow": true,
+      "reorder": true,
+      "pinAndMute": true,
+      "tabGroup": true,
+      "automaticFocus": true,
+      "moveBetweenWindows": true,
+      "nativePanelOwnedByEngine": true,
+      "systemMenuTuranShield": true,
+      "turanDockOwnedByChrome": true,
+      "turanDockAvailable": true,
+      "turanDockRoutesToOwnedPanel": true,
+      "oneWindowCloseRetainsOther": true,
+      "lastWindowCloseExit": 0
+    },
+    "integrated_publisher_operations": {
+      "uBOL": {
+        "scope": "normal-window architecture candidate; production shell unchanged",
+        "runtime": "chrome-integrated",
+        "binarySha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+        "extension": {
+          "description": "An efficient content blocker. Blocks ads, trackers, miners, and more immediately upon installation.",
+          "enabled": true,
+          "homepageUrl": "",
+          "hostPermissions": [
+            "<all_urls>"
+          ],
+          "icons": [
+            {
+              "size": 16,
+              "url": "chrome://extension-icon/mlmnbleenmhefnokoekcgaokhgffllca/16/0"
+            },
+            {
+              "size": 32,
+              "url": "chrome://extension-icon/mlmnbleenmhefnokoekcgaokhgffllca/32/0"
+            },
+            {
+              "size": 64,
+              "url": "chrome://extension-icon/mlmnbleenmhefnokoekcgaokhgffllca/64/0"
+            },
+            {
+              "size": 128,
+              "url": "chrome://extension-icon/mlmnbleenmhefnokoekcgaokhgffllca/128/0"
+            }
+          ],
+          "id": "mlmnbleenmhefnokoekcgaokhgffllca",
+          "installType": "development",
+          "isApp": false,
+          "mayDisable": true,
+          "name": "uBlock Origin Lite",
+          "offlineEnabled": false,
+          "optionsUrl": "chrome-extension://mlmnbleenmhefnokoekcgaokhgffllca/dashboard.html",
+          "permissions": [
+            "activeTab",
+            "alarms",
+            "declarativeNetRequest",
+            "offscreen",
+            "scripting",
+            "storage",
+            "unlimitedStorage",
+            "userScripts"
+          ],
+          "shortName": "uBO Lite",
+          "type": "extension",
+          "version": "2026.1006.1931",
+          "versionName": ""
+        },
+        "manifestVersion": 3,
+        "actualAdRequestBlocked": true,
+        "requestReachedServer": false,
+        "fixtureWindowId": 664309258,
+        "configuredActionPopup": "chrome-extension://mlmnbleenmhefnokoekcgaokhgffllca/popup.html",
+        "actionPopupOpened": true,
+        "popupText": "127.0.0.1\nfiltering mode\noptimal\nOn this website\nRemove an element\nCreate a custom filter\nReport an issue",
+        "engineDisable": true,
+        "adRequestSucceedsWhenDisabled": true,
+        "disabledRequestReachedServer": true,
+        "engineEnable": true,
+        "exitCode": 0
+      },
+      "DarkReader": {
+        "scope": "normal-window architecture candidate; production shell unchanged",
+        "runtime": "chrome-integrated",
+        "binarySha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+        "extension": {
+          "description": "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.",
+          "enabled": true,
+          "homepageUrl": "",
+          "hostPermissions": [
+            "*://*/*"
+          ],
+          "icons": [
+            {
+              "size": 16,
+              "url": "chrome://extension-icon/pgdcpiohfobnijnmchfgpmhimhkfdika/16/0"
+            },
+            {
+              "size": 48,
+              "url": "chrome://extension-icon/pgdcpiohfobnijnmchfgpmhimhkfdika/48/0"
+            },
+            {
+              "size": 128,
+              "url": "chrome://extension-icon/pgdcpiohfobnijnmchfgpmhimhkfdika/128/0"
+            }
+          ],
+          "id": "pgdcpiohfobnijnmchfgpmhimhkfdika",
+          "installType": "development",
+          "isApp": false,
+          "mayDisable": true,
+          "name": "Dark Reader",
+          "offlineEnabled": false,
+          "optionsUrl": "chrome-extension://pgdcpiohfobnijnmchfgpmhimhkfdika/ui/popup/index.html",
+          "permissions": [
+            "alarms",
+            "fontSettings",
+            "scripting",
+            "storage"
+          ],
+          "shortName": "Dark Reader",
+          "type": "extension",
+          "version": "4.9.133",
+          "versionName": ""
+        },
+        "manifestVersion": 3,
+        "dynamicStyleInjected": true,
+        "pageColors": {
+          "background": "rgb(24, 26, 27)",
+          "color": "rgb(232, 230, 227)"
+        },
+        "fixtureWindowId": 663026445,
+        "configuredActionPopup": "chrome-extension://pgdcpiohfobnijnmchfgpmhimhkfdika/ui/popup/index.html",
+        "actionPopupOpened": true,
+        "popupText": "Loading, please wait\nDark Reader\n 127.0.0.1:41229\nConfigure website toggling\nOn\nOff\nConfigure automation\nFilter\nSite list\nMore\nDark\nLight\nMode\nBrightness\noff\nContrast\noff\nSepia\noff\nGrayscale\noff\nOnly for 127.0.0.1:41229\n\ud83c\udf89\nDark Reader celebrates 12 years. Please support our work.\nPay for using Dark Reader\nInvert listed only\nNot invert listed\nSetup a hotkey for adding site\nAS-TTDurga\nArial\nArial Monospaced\nArial Monospaced MT\nBN-TTDurga\nBahnschrift\nCalibri\nCambria\nCambria Math\nCandara\nCascadia Code\nCascadia Mono\nComic Sans MS\nConsolas\nConstantia\nCorbel\nCourier New\nSelect a font\nText stroke\noff\nDynamic\nFilter\nFilter+\nStatic\nTheme generation mode\nOnly for 127.0.0.1:41229\n\nApply settings to current website only\n\nAll settings\nHelp\nNews\nMobile\nNews\n\u2715\nDark Reader Mobile\n\u2715\nReduce eye strain when reading on your phone or tablet. Simply scan the QR code to install.\nLearn more\nSite Toggling\n\u2715\nEnabled by Default\n\nEnabled for all websites by default\n\nDetect dark theme\n\nDetect the website's dark theme\n\nClick to set the shortcut\n\nWebsite toggle keyboard shortcut\n\nPay for using Dark Reader\n\nSupport our work\n\nAutomation\n\u2715\n\nSet active hours\n\nActivate after sunset at location\n\nUse system color scheme\n\nActivate when system dark mode is on\n\nAlt+Shift+D\n\nExtension on/off keyboard shortcut\n\nPay for using Dark Reader\n\nSupport our work",
+        "engineDisable": true,
+        "disabledPageColors": {
+          "background": "rgb(255, 255, 255)",
+          "color": "rgb(0, 0, 0)"
+        },
+        "engineEnable": true,
+        "exitCode": 0
+      },
+      "Bitwarden": {
+        "scope": "normal-window architecture candidate; production shell unchanged",
+        "runtime": "chrome-integrated",
+        "binarySha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+        "extension": {
+          "description": "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information",
+          "enabled": true,
+          "homepageUrl": "https://bitwarden.com/",
+          "hostPermissions": [
+            "http://*/*",
+            "https://*/*"
+          ],
+          "icons": [
+            {
+              "size": 16,
+              "url": "chrome://extension-icon/jhlljkmgkcjoegohjhanbdlljenefhhf/16/0"
+            },
+            {
+              "size": 32,
+              "url": "chrome://extension-icon/jhlljkmgkcjoegohjhanbdlljenefhhf/32/0"
+            },
+            {
+              "size": 48,
+              "url": "chrome://extension-icon/jhlljkmgkcjoegohjhanbdlljenefhhf/48/0"
+            },
+            {
+              "size": 96,
+              "url": "chrome://extension-icon/jhlljkmgkcjoegohjhanbdlljenefhhf/96/0"
+            },
+            {
+              "size": 128,
+              "url": "chrome://extension-icon/jhlljkmgkcjoegohjhanbdlljenefhhf/128/0"
+            }
+          ],
+          "id": "jhlljkmgkcjoegohjhanbdlljenefhhf",
+          "installType": "development",
+          "isApp": false,
+          "mayDisable": true,
+          "name": "Bitwarden Password Manager",
+          "offlineEnabled": false,
+          "optionsUrl": "",
+          "permissions": [
+            "activeTab",
+            "alarms",
+            "clipboardRead",
+            "clipboardWrite",
+            "contextMenus",
+            "idle",
+            "notifications",
+            "offscreen",
+            "scripting",
+            "sidePanel",
+            "storage",
+            "tabs",
+            "unlimitedStorage",
+            "webNavigation",
+            "webRequest",
+            "webRequestAuthProvider"
+          ],
+          "shortName": "Bitwarden",
+          "type": "extension",
+          "version": "2026.9.3",
+          "versionName": ""
+        },
+        "manifestVersion": 3,
+        "fixtureWindowId": 1575277874,
+        "configuredActionPopup": "chrome-extension://jhlljkmgkcjoegohjhanbdlljenefhhf/popup/index.html",
+        "initialActionError": "{\"exceptionId\": 2, \"text\": \"Uncaught (in promise) Error: Failed to open popup.\", \"lineNumber\": 0, \"columnNumber\": 0, \"exception\": {\"type\": \"object\", \"subtype\": \"error\", \"className\": \"Error\", \"description\": \"Error: Failed to open popup.\", \"objectId\": \"-669987593005702718.1.1\"}}",
+        "onboardingText": "Make Bitwarden your browser's default password manager\n1\n\nSelect Continue.\n\n2\n\nSelect Allow from the browser prompt to give Bitwarden permission to change your settings.\n\n3\n\nWe'll turn off your browser's built-in password manager so you can enjoy a secure login experience.\n\nContinue\nSkip",
+        "onboardingSkipped": true,
+        "onboardingReady": true,
+        "actionPopupOpened": true,
+        "popupText": "Security, prioritized\n\nSave logins, cards, and identities to your secure vault. Bitwarden uses zero-knowledge, end-to-end encryption to protect what\u2019s important to you.\n\nCreate account\nLog in",
+        "afterSkipText": "Security, prioritized\n\nSave logins, cards, and identities to your secure vault. Bitwarden uses zero-knowledge, end-to-end encryption to protect what\u2019s important to you.\n\nCreate account\nLog in",
+        "loggedOutUI": true,
+        "vaultLoginAndAutofill": "NOT TESTED: no test vault/account credentials",
+        "engineDisable": true,
+        "engineEnable": true,
+        "exitCode": 0
+      }
+    },
+    "native_unpacked_extension_lifecycle": {
+      "runtime": "chrome-integrated",
+      "scope": "engine WebUI fixture lifecycle; startup unpacked loading by default; optional native picker; no store/CRX certification",
+      "nativePickerRequested": true,
+      "binarySha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "nativeExtensionsMenuRegistered": true,
+      "nativeCommandTransport": "Chrome frame WM_SYSCOMMAND 0x1F20",
+      "nativeCommandSent": true,
+      "managerTargetValidated": true,
+      "nativeMenuOpensEngineManager": true,
+      "developerMode": true,
+      "folderDialogControls": [
+        {
+          "class": "DUIViewWndClassName",
+          "id": 0
+        },
+        {
+          "class": "DirectUIHWND",
+          "id": 0
+        },
+        {
+          "class": "CtrlNotifySink",
+          "id": 0
+        },
+        {
+          "class": "NamespaceTreeControl",
+          "id": 0
+        },
+        {
+          "class": "Static",
+          "id": 0
+        },
+        {
+          "class": "SysTreeView32",
+          "id": 100
+        },
+        {
+          "class": "CtrlNotifySink",
+          "id": 0
+        },
+        {
+          "class": "SHELLDLL_DefView",
+          "id": 1121
+        },
+        {
+          "class": "DirectUIHWND",
+          "id": 0
+        },
+        {
+          "class": "CtrlNotifySink",
+          "id": 0
+        },
+        {
+          "class": "ScrollBar",
+          "id": 0
+        },
+        {
+          "class": "CtrlNotifySink",
+          "id": 0
+        },
+        {
+          "class": "ScrollBar",
+          "id": 0
+        },
+        {
+          "class": "Static",
+          "id": 1090
+        },
+        {
+          "class": "Edit",
+          "id": 1152
+        },
+        {
+          "class": "Button",
+          "id": 1
+        },
+        {
+          "class": "Button",
+          "id": 2
+        },
+        {
+          "class": "ScrollBar",
+          "id": -1
+        },
+        {
+          "class": "Static",
+          "id": 1092
+        },
+        {
+          "class": "Static",
+          "id": 1091
+        },
+        {
+          "class": "Static",
+          "id": 1093
+        },
+        {
+          "class": "ListBox",
+          "id": 1120
+        },
+        {
+          "class": "Static",
+          "id": 1095
+        },
+        {
+          "class": "Button",
+          "id": 1038
+        },
+        {
+          "class": "WorkerW",
+          "id": 0
+        },
+        {
+          "class": "ReBarWindow32",
+          "id": 40965
+        },
+        {
+          "class": "TravelBand",
+          "id": 0
+        },
+        {
+          "class": "ToolbarWindow32",
+          "id": 0
+        },
+        {
+          "class": "UpBand",
+          "id": 0
+        },
+        {
+          "class": "ToolbarWindow32",
+          "id": 0
+        },
+        {
+          "class": "Address Band Root",
+          "id": 41477
+        },
+        {
+          "class": "msctls_progress32",
+          "id": 0
+        },
+        {
+          "class": "Breadcrumb Parent",
+          "id": 0
+        },
+        {
+          "class": "ToolbarWindow32",
+          "id": 1001
+        },
+        {
+          "class": "ToolbarWindow32",
+          "id": 0
+        },
+        {
+          "class": "ComboBoxEx32",
+          "id": 41477
+        },
+        {
+          "class": "ComboBox",
+          "id": 41477
+        },
+        {
+          "class": "Edit",
+          "id": 41477
+        },
+        {
+          "class": "SeparatorBand",
+          "id": 0
+        },
+        {
+          "class": "UniversalSearchBand",
+          "id": 0
+        },
+        {
+          "class": "Search Box",
+          "id": 0
+        },
+        {
+          "class": "SearchEditBoxWrapperClass",
+          "id": 0
+        },
+        {
+          "class": "DirectUIHWND",
+          "id": 0
+        },
+        {
+          "class": "SeparatorBand",
+          "id": 0
+        }
+      ],
+      "nativeUnpackedInstall": {
+        "ok": true
+      },
+      "installedInfo": {
+        "canUploadAsAccountExtension": false,
+        "commands": [
+          {
+            "description": "Activate the extension",
+            "isActive": false,
+            "isExtensionAction": true,
+            "keybinding": "",
+            "name": "_execute_action",
+            "scope": "CHROME"
+          }
+        ],
+        "dependentExtensions": [],
+        "description": "",
+        "disableReasons": {
+          "blockedByPolicy": false,
+          "corruptInstall": false,
+          "custodianApprovalRequired": false,
+          "parentDisabledPermissions": false,
+          "publishedInStoreRequired": false,
+          "reloading": false,
+          "suspiciousInstall": false,
+          "unsupportedDeveloperExtension": false,
+          "unsupportedManifestVersion": false,
+          "updateRequired": false
+        },
+        "errorCollection": {
+          "isActive": true,
+          "isEnabled": true
+        },
+        "fileAccess": {
+          "isActive": true,
+          "isEnabled": true
+        },
+        "fileAccessPendingChange": false,
+        "homePage": {
+          "specified": false,
+          "url": ""
+        },
+        "iconUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABMklEQVR4nOzar27CUBTH8R+3NSOZwhDQMxOb6Av0HbaHaNIlczzBFE9Qh9nE9F7gyolWoBFTNJtgYktANXAOfxME6ianJzmfpA1tEOdbLqa5MUiWZcMoisb0MaVjgHar6fBN04yKoph39sNP6WYPuiwo4j7eP3ltw7Mezx5jt2y0Sjmg7Wv+koGDchYgzQKkWYA0C5BmAdLUB8QIaPyconvzePE733S8PH3S+RUhBA2opnN0/6rj9d3wCqv+LWbVF139bu8ttucZQgka8O5pMH8ajn+RJQVMJj8I9cTP2Z9YmgVIswBpFiDNAqSpD+jkeb6GYraEpFmANAuQZgHSLECaBUjjgBp61RzgoZd3vOsDh1eWuvBmj1FUluV/kiRvzrk+dps+rtFuvOQ/aPgH3m6zAQAA//9Wt0jXAAAABklEQVQDAN8MRpMOahG4AAAAAElFTkSuQmCC",
+        "id": "dpkbjiebkppilhddgidlhhbhopdkipcp",
+        "incognitoAccess": {
+          "isActive": false,
+          "isEnabled": true
+        },
+        "incognitoAccessPendingChange": false,
+        "installWarnings": [],
+        "isAffectedByMV2Deprecation": false,
+        "isCommandRegistrationHandledExternally": false,
+        "location": "UNPACKED",
+        "manifestErrors": [],
+        "manifestHomePageUrl": "",
+        "mustRemainInstalled": false,
+        "name": "Turan isolated lifecycle fixture",
+        "offlineEnabled": false,
+        "optionsPage": {
+          "openInTab": true,
+          "url": "chrome-extension://dpkbjiebkppilhddgidlhhbhopdkipcp/options.html"
+        },
+        "path": "C:\\Users\\\u0131zoly\\AppData\\Local\\Temp\\turan-extension-lifecycle-cedun9lc\\fixture",
+        "permissions": {
+          "runtimeHostPermissions": {
+            "hasAllHosts": false,
+            "hostAccess": "ON_ALL_SITES",
+            "hosts": [
+              {
+                "granted": true,
+                "host": "http://127.0.0.1/*"
+              }
+            ]
+          },
+          "simplePermissions": []
+        },
+        "pinnedToToolbar": false,
+        "prettifiedPath": "~\\AppData\\Local\\Temp\\turan-extension-lifecycle-cedun9lc\\fixture",
+        "runtimeErrors": [],
+        "runtimeWarnings": [],
+        "showAccessRequestsInToolbar": true,
+        "showSafeBrowsingAllowlistWarning": false,
+        "state": "ENABLED",
+        "type": "EXTENSION",
+        "updateUrl": "",
+        "userMayModify": true,
+        "userScriptsAccess": {
+          "isActive": false,
+          "isEnabled": false
+        },
+        "version": "1.0.0",
+        "views": [
+          {
+            "incognito": false,
+            "isIframe": false,
+            "renderProcessId": 12,
+            "renderViewId": -1,
+            "type": "EXTENSION_SERVICE_WORKER_BACKGROUND",
+            "url": "chrome-extension://dpkbjiebkppilhddgidlhhbhopdkipcp/worker.js"
+          }
+        ],
+        "webStoreUrl": ""
+      },
+      "realPermissionInfo": true,
+      "actionPopupManifest": "chrome-extension://dpkbjiebkppilhddgidlhhbhopdkipcp/popup.html",
+      "toolbarPinBeforeIncognitoReload": true,
+      "toolbarPinAndSeparateIncognitoPermission": true,
+      "enableDisable": true,
+      "unpackedVersionUpdate": true,
+      "externalPageHasNoDeveloperPrivate": true,
+      "nativeRemovalConfirmation": {
+        "button": "Remove",
+        "dialog": "Remove \"Turan isolated lifecycle fixture\"?",
+        "confirmed": true
+      },
+      "fixtureRemovalApi": true,
+      "nativeRemovalConfirmationTested": true,
+      "exitCode": 0
+    },
+    "explicit_password_forms_alloy": {
+      "scope": "Windows 11 native vault, real CEF on authenticated HTTPS example.org with synthetic DOM; no form submission, user credentials, trust-store mutation, account login or universal form compatibility claim",
+      "passed": true,
+      "runtime": "default",
+      "dllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "authenticatedHttpsPageLoaded": true,
+      "nativeCreateEncryptedVault": true,
+      "wrongReauthenticationCannotFill": true,
+      "nativeExplicitAutofillExactHttpsOrigin": true,
+      "captureUpdateUsesIsolatedNativeInputGetter": true,
+      "crossOriginFormActionRefused": true,
+      "passwordRegistrationFormRefused": true,
+      "ambiguousPasswordFormRefused": true,
+      "iframeOnlyFormRefused": true,
+      "navigationDuringReauthCannotFillReplacement": true,
+      "sameUrlReloadCannotFillReplacement": true,
+      "lockUnlockRetainsEncryptedRecords": true,
+      "sessionLockNotificationHandlerClearsVault": true,
+      "nativeGeneratorUsesBoundedRandomPassword": true,
+      "diskBackupAndLogsDoNotContainSyntheticSecrets": true,
+      "cleanExit": true
+    },
+    "explicit_password_forms_chrome": {
+      "scope": "Windows 11 native vault, real CEF on authenticated HTTPS example.org with synthetic DOM; no form submission, user credentials, trust-store mutation, account login or universal form compatibility claim",
+      "passed": true,
+      "runtime": "chrome-integrated",
+      "dllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "authenticatedHttpsPageLoaded": true,
+      "nativeCreateEncryptedVault": true,
+      "wrongReauthenticationCannotFill": true,
+      "nativeExplicitAutofillExactHttpsOrigin": true,
+      "captureUpdateUsesIsolatedNativeInputGetter": true,
+      "crossOriginFormActionRefused": true,
+      "passwordRegistrationFormRefused": true,
+      "ambiguousPasswordFormRefused": true,
+      "iframeOnlyFormRefused": true,
+      "navigationDuringReauthCannotFillReplacement": true,
+      "sameUrlReloadCannotFillReplacement": true,
+      "lockUnlockRetainsEncryptedRecords": true,
+      "sessionLockNotificationHandlerClearsVault": true,
+      "nativeGeneratorUsesBoundedRandomPassword": true,
+      "diskBackupAndLogsDoNotContainSyntheticSecrets": true,
+      "cleanExit": true
+    },
+    "subscriptions_alloy": {
+      "runtime": "alloy",
+      "passed": true,
+      "scope": "Windows 11 actual CEF loopback requests, cosmetics, native subscription controls and restart; synthetic pre-consented cache, no live publisher fetch",
+      "dllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "fixture": "C:\\Users\\ZOLY~1\\AppData\\Local\\Temp\\turan-subscriptions-cef-252zkhls",
+      "engine": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.98",
+        "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "cachedListsDefaultOffWithoutConsent": true,
+      "actualBlockedRequestsAndServerNegativeControls": true,
+      "actualCosmeticsAfterReloadAndOrdinaryNegative": true,
+      "unsupportedConstraintNotRelaxed": true,
+      "nativeListDetails": "EasyList\r\nhttps://easylist.to/easylist/easylist.txt\r\nGPL-3.0-or-later OR CC-BY-SA-3.0-or-later\r\n\r\nEnabled: Yes    Cached: Yes\r\nNetwork rules: 1    Cosmetic rules: 1\r\nUnsupported rules skipped: 1\r\nInvalid rules skipped: 0\r\nBytes: 165    Updated (Unix seconds): 1791756845\r\nSHA-256: e3a3fc08bdabb604c39654e046effe4a2ba5055d312d52624101e21b6bacb2a0\r\nActive policy: Validated subscription policy is active\r\n\r\nTuran supports a bounded ABP subset. Unsupported rule constraints are skipped whole; scriptlets and redirect execution are not enabled. Cache integrity hashes are not publisher signatures.",
+      "actualShieldCounters": "Ads: 1  Trackers: 1  Custom: 1\r\nNetwork / cosmetic rules: 11 / 2\r\nValidated subscription policy is active\r\nSkipped unsupported / invalid: 1 / 0",
+      "nativeRollbackReplacesActualPolicy": true,
+      "nativeDisableRemovesListKeepsOtherListsAndCustom": true,
+      "disableAllPreservesCustomAndReloadClearsCosmetics": true,
+      "nativeConsentNotice": "&Evet\n&Hay\u0131r\n\nEnable this optional subscription?\r\n\r\nEasyPrivacy\nhttps://easylist.to/easylist/easyprivacy.txt\nGPL-3.0-or-later OR CC-BY-SA-3.0-or-later\r\n\r\nUpdates make HTTPS requests to this publisher using Windows TLS and direct DNS, outside the browser's Secure DNS/proxy settings. No browsing URLs, cookies or login credentials are sent. Valid lists refresh once per day; failed requests retry after one hour. The supported ABP subset skips unsupported/invalid rules. Disabled by default.",
+      "nativeConsentDeclinePreservesDisabledState": true,
+      "unconfiguredUpdaterFailsClosed": "A NorthByte publisher public key and HTTPS release endpoint have not been provisioned. Unauthenticated packages cannot be installed.",
+      "restartConsentAndLegacyDataPreserved": true,
+      "requests": [
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/default-off"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "ads.subscription.example:9903",
+          "path": "/data-default-off"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "control.subscription.example:9903",
+          "path": "/data-negative-control"
+        },
+        {
+          "host": "unsupported.subscription.example:9903",
+          "path": "/data-unsupported-rule-negative"
+        },
+        {
+          "host": "ads.subscription.example:9903",
+          "path": "/data-after-rollback"
+        },
+        {
+          "host": "previous.subscription.example:9903",
+          "path": "/data-after-ad-disable"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "tracker.subscription.example:9903",
+          "path": "/data-after-tracker-disable"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "tracker.subscription.example:9903",
+          "path": "/data-after-consent-decline"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/restart-disabled"
+        },
+        {
+          "host": "127.0.0.1:9903",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "previous.subscription.example:9903",
+          "path": "/data-restart-ad-allowed"
+        },
+        {
+          "host": "tracker.subscription.example:9903",
+          "path": "/data-restart-tracker-allowed"
+        }
+      ]
+    },
+    "subscriptions_chrome": {
+      "runtime": "chrome-integrated",
+      "passed": true,
+      "scope": "Windows 11 actual CEF loopback requests, cosmetics, native subscription controls and restart; synthetic pre-consented cache, no live publisher fetch",
+      "dllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "fixture": "C:\\Users\\ZOLY~1\\AppData\\Local\\Temp\\turan-subscriptions-cef-aw655zd1",
+      "engine": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.98",
+        "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      },
+      "cachedListsDefaultOffWithoutConsent": true,
+      "actualBlockedRequestsAndServerNegativeControls": true,
+      "actualCosmeticsAfterReloadAndOrdinaryNegative": true,
+      "unsupportedConstraintNotRelaxed": true,
+      "nativeListDetails": "EasyList\r\nhttps://easylist.to/easylist/easylist.txt\r\nGPL-3.0-or-later OR CC-BY-SA-3.0-or-later\r\n\r\nEnabled: Yes    Cached: Yes\r\nNetwork rules: 1    Cosmetic rules: 1\r\nUnsupported rules skipped: 1\r\nInvalid rules skipped: 0\r\nBytes: 165    Updated (Unix seconds): 1791756859\r\nSHA-256: e3a3fc08bdabb604c39654e046effe4a2ba5055d312d52624101e21b6bacb2a0\r\nActive policy: Validated subscription policy is active\r\n\r\nTuran supports a bounded ABP subset. Unsupported rule constraints are skipped whole; scriptlets and redirect execution are not enabled. Cache integrity hashes are not publisher signatures.",
+      "actualShieldCounters": "Ads: 1  Trackers: 1  Custom: 1\r\nNetwork / cosmetic rules: 11 / 2\r\nValidated subscription policy is active\r\nSkipped unsupported / invalid: 1 / 0",
+      "nativeRollbackReplacesActualPolicy": true,
+      "nativeDisableRemovesListKeepsOtherListsAndCustom": true,
+      "disableAllPreservesCustomAndReloadClearsCosmetics": true,
+      "nativeConsentNotice": "&Evet\n&Hay\u0131r\n\nEnable this optional subscription?\r\n\r\nEasyPrivacy\nhttps://easylist.to/easylist/easyprivacy.txt\nGPL-3.0-or-later OR CC-BY-SA-3.0-or-later\r\n\r\nUpdates make HTTPS requests to this publisher using Windows TLS and direct DNS, outside the browser's Secure DNS/proxy settings. No browsing URLs, cookies or login credentials are sent. Valid lists refresh once per day; failed requests retry after one hour. The supported ABP subset skips unsupported/invalid rules. Disabled by default.",
+      "nativeConsentDeclinePreservesDisabledState": true,
+      "unconfiguredUpdaterFailsClosed": "A NorthByte publisher public key and HTTPS release endpoint have not been provisioned. Unauthenticated packages cannot be installed.",
+      "restartConsentAndLegacyDataPreserved": true,
+      "requests": [
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/default-off"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "ads.subscription.example:23101",
+          "path": "/data-default-off"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "control.subscription.example:23101",
+          "path": "/data-negative-control"
+        },
+        {
+          "host": "unsupported.subscription.example:23101",
+          "path": "/data-unsupported-rule-negative"
+        },
+        {
+          "host": "ads.subscription.example:23101",
+          "path": "/data-after-rollback"
+        },
+        {
+          "host": "previous.subscription.example:23101",
+          "path": "/data-after-ad-disable"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "tracker.subscription.example:23101",
+          "path": "/data-after-tracker-disable"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/enabled"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "tracker.subscription.example:23101",
+          "path": "/data-after-consent-decline"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/restart-disabled"
+        },
+        {
+          "host": "127.0.0.1:23101",
+          "path": "/favicon.ico"
+        },
+        {
+          "host": "previous.subscription.example:23101",
+          "path": "/data-restart-ad-allowed"
+        },
+        {
+          "host": "tracker.subscription.example:23101",
+          "path": "/data-restart-tracker-allowed"
+        }
+      ]
+    },
+    "native_update_panel": {
+      "passed": true,
+      "dllSha256": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+      "helperSha256": "41a902ff7b82013cf504b6e8475919ade34c5616c2de5a219c4ced268cb3845b",
+      "scope": "Windows 11 actual CEF native updater panels, unconfigured policy, worker shutdown join and helper refusal; no production update or packet-capture certification",
+      "windowsTrustStoreModified": false,
+      "authenticodeClaim": false,
+      "runtimes": {
+        "default": {
+          "actualCefDocumentLoaded": true,
+          "mainCommand216OpensNativePanel": true,
+          "nativePanelCaption": "Turan Browser - secure update",
+          "ownedByActualBrowserRoot": true,
+          "unconfiguredStatusAccurate": true,
+          "checkDownloadInstallDisabled": {
+            "check": false,
+            "download": false,
+            "install": false
+          },
+          "forcedNativeCheckFailsBeforeRequestByPolicy": true,
+          "panelCloseAndRootCloseWithRegisteredWorker": true,
+          "exitCode": 0,
+          "legacyBookmarkAndUserSentinelPreserved": true,
+          "productionPublisherKey": false,
+          "productionUpdateService": false
+        },
+        "chrome-integrated": {
+          "actualCefDocumentLoaded": true,
+          "mainCommand216OpensNativePanel": true,
+          "nativePanelCaption": "Turan Browser - secure update",
+          "ownedByActualBrowserRoot": true,
+          "unconfiguredStatusAccurate": true,
+          "checkDownloadInstallDisabled": {
+            "check": false,
+            "download": false,
+            "install": false
+          },
+          "forcedNativeCheckFailsBeforeRequestByPolicy": true,
+          "panelCloseAndRootCloseWithRegisteredWorker": true,
+          "exitCode": 0,
+          "legacyBookmarkAndUserSentinelPreserved": true,
+          "productionPublisherKey": false,
+          "productionUpdateService": false
+        }
+      },
+      "ownedFixture": "C:\\Users\\\u0131zoly\\Downloads\\TuranBrowser-0.2.0-dev-release-hardening-SOURCE-20261011\\artifacts\\update-panel-cef-69109c583f57482a8a6136f08c75c41a",
+      "compiledInventoryExact": true,
+      "compiledInventoryEntries": 47,
+      "compiledInventorySha256": "103eced4e7c8809ad149582bb02fc977656f7873dffce6f586fbd11f957fc18e",
+      "productionTrustHeaderUnconfigured": true,
+      "actualShippedHelperUnconfiguredExit": 3,
+      "actualHelperLeavesSyntheticAppAndProfilesByteIdentical": true
+    }
+  },
+  "binary_sha256": {
+    "TuranBrowser.exe": "170b279673bddc2085a7b132dd5edba9a2aaa247531eb9adf94d567e51d6eb30",
+    "TuranBrowser.dll": "b9f0fa047bc3c4c437dbf532a3c0d11f2515f2a11b2dc661dc55d9a505c31ccd",
+    "TuranStartup.exe": "3fa02f16b226535cbe73a2b1949df4d8f305a9953f76469fba3a5fba04519362",
+    "TuranProfileTool.exe": "cf0d407f700d47a263bb20b21da95fd92285d603695a6b67ffdcc84a53ac1b9c",
+    "TuranUpdateTool.exe": "41a902ff7b82013cf504b6e8475919ade34c5616c2de5a219c4ced268cb3845b",
+    "chrome_elf.dll": "f26656bfe38e1b78e42f292b6a8be1b5f0b5db15395ac571d6e20a1dedf698fb",
+    "d3dcompiler_47.dll": "f5c95e919b4ffa1ac71049cd45b9f986d2965e6888395ca2806337985334fa56",
+    "libcef.dll": "e3da6707a840a8f33f565e011542169fd51aaa5218603eb7a89039fb16d79ae7",
+    "v8_context_snapshot.bin": "4cfa19d8bed5d24f0567f165f3396f5e06c4676ebb913249d317e93e539ea384",
+    "vk_swiftshader.dll": "8de8ba210a07034adcbdc63055314c1ebea8634a4e9fbacc6b64cafce67e4fef",
+    "vk_swiftshader_icd.json": "32d83ff113fef532a9f97e0d2831f8656628ab1c99e9060f0332b1532839afd9",
+    "vulkan-1.dll": "11329b3cc832eaa2569e6f5a25aaffa4d065651386251e4857ffbe572d8d3382",
+    "dxil.dll": "0850398076e9e30cd9ac28fc7d56a7d350ea755b0f3b6b2fc8f35a930888c845",
+    "dxcompiler.dll": "d2bcdaab7772d60d2f2c53781bf4449dde9e6491ec82b24da3f581c21c12d110",
+    "chrome_100_percent.pak": "04fe059b62e211571307ef2937b2c966e6a7b0e58e9d2149ffda618679e65fad",
+    "chrome_200_percent.pak": "4b0802784c08feaa31dc3dca8953be8e217cf2e7f53d5ab8751ba998f391eecf",
+    "resources.pak": "8ee8b095ac381ebee66ee2a24ec6cd72adce90c101b82c132b753a2abaf4b246",
+    "icudtl.dat": "495c45cc7a65562ec461f860c310c6b66e006acd96833f61d1aa31f77fe18cf1",
+    "locales/en-US.pak": "283f125719e3954d24de78a41329840a281e5b255379daf77cb66cbf2887a920",
+    "locales/tr.pak": "aa18d9415d8e70d3b5f0a1dbc6f0405eddedd63eae6a3d3fcf6b1e7743283e9b",
+    "CEF-LICENSE.txt": "2e69c36a7eaa4fa153426eab635c607ea0356cbc7a68a70f42a49e8ab8eb8106",
+    "CEF-CREDITS.html": "eb5a0b6300c58bb8316a66b3e935d55b1456f8f1cf225c979b03d42afa878c4b",
+    "LICENSE.txt": "7aea4699a0ae2380b3e4bee50885facdfaab2015493847b2d79760c68c2722ed",
+    "docs/TOR_ARCHITECTURE.md": "d7260903f4d5116aebac4af84377a509c9b473c0897888e6a548957e8c84fba5",
+    "docs/PASSWORD_VAULT.md": "5615c4d0234008cfb4f3a7f67bdca4eabfe9e13ba6868e74e54e23d82cdf457a",
+    "docs/FILTER_SUBSCRIPTIONS.md": "356a29b22a13e2faf8d5ec4330cddc6c15fe85b47b7358fc619307c900b8ee62",
+    "docs/UPDATE_ARCHITECTURE.md": "7692b4b754221037bedd9f2d467fa3d8f09b823c421d04ab537127cf841bcce8",
+    "resources/licenses/ABSEIL-LICENSE.txt": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747",
+    "resources/licenses/MPL-2.0.txt": "66a3107d5ad6a058aab753eaac2047ccb2ed0e39465dd0fe5844da3e300d5172",
+    "resources/licenses/RE2-LICENSE.txt": "6040cda75d90b1738292a631d89934c411ef7ffd543c4d6a1b7edfc8edf29449",
+    "resources/profile_tool.rc": "57e6ba375f3b3c403cf8b2c55bc8aec8a0b362d9ef9ac0a5ed919a585dd6052b",
+    "resources/public_suffix_list.dat": "2919eb9803c91a3f73a507cc6fedc934de005543c22c4016f72e3343de5dd6e7",
+    "resources/shield-domains.txt": "b83fd9cf0292e77dd4cdc424043f507f37e7a3e0453bcc539ad65a34c6706528",
+    "resources/start.html": "13cb82ca7ad946c263ff72569d67db0d6d0abaf0e2a8d9eb46167a6338f32533",
+    "resources/turan.ico": "f681c9eba89df39fcdb4fea895b8de5fb6bc6311f634a92b673fce853f96125a",
+    "resources/turan.rc": "f4601b0ac174ed020439415372ab1f122c77d4592f81ef68f974e52a60933c69",
+    "resources/turan.svg": "b24644facc15f9000000d046d6fa2e9aa6bb539b0e4e90e2f0e38118659dfe3b",
+    "resources/version.h.in": "0bcbf8a7890bd9590cce1c401e939263ee69477345fec115b51aa034d4d53fdf"
+  }
+}

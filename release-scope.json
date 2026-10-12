@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "profile": "win11-x64-offline-updates-v1",
+  "targetVersion": "1.0.0",
+  "supportedPlatforms": [
+    "windows11-x64"
+  ],
+  "productionUpdates": "disabled_until_provisioned",
+  "extensionArchitecture": "chromium_normal_tabs_without_reparenting",
+  "customBrowserUI": "required_for_release_not_yet_accepted",
+  "notes": "Must prove the unprovisioned updater fails closed. Production automatic updates require a different, explicitly reviewed scope and separate production key/HTTPS tests."
+}

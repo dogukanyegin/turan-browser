@@ -1,0 +1,119 @@
+name: Turan Browser Windows engineering build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'tools/**'
+      - 'resources/**'
+      - 'packaging/**'
+      - 'docs/**'
+      - '.github/workflows/windows-engineering-build.yml'
+      - 'CMakeLists.txt'
+      - '*lock.json'
+      - 'release.json'
+      - 'release-acceptance.json'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'tools/**'
+      - 'resources/**'
+      - 'packaging/**'
+      - 'CMakeLists.txt'
+      - '*lock.json'
+      - 'release.json'
+      - 'release-acceptance.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: turan-windows-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-verify:
+    name: Windows x64 (engineering, not Stable acceptance)
+    runs-on: windows-2025
+    timeout-minutes: 180
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Check VS C++ toolchain
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          cmake --version
+          python --version
+          node --version
+          $locator = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'
+          if (-not (Test-Path $locator)) { throw 'Visual Studio locator unavailable' }
+          & $locator -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationPath
+          if ($LASTEXITCODE -ne 0) { throw 'MSVC x64 tools unavailable' }
+
+      - name: Run offline source/security tests
+        shell: pwsh
+        run: |
+          python -m unittest discover -s tests -p '*test.py' -v
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python tools/release_gate.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Compile, execute real-engine fixtures and package
+        shell: pwsh
+        run: |
+          python tools/build_cef.py all
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Reopen and verify final engineering archives
+        shell: pwsh
+        run: |
+          $r = Get-Content release.json -Raw | ConvertFrom-Json
+          $v = $r.version
+          python tools/verify_distribution.py "dist/TuranBrowser-$v-source.zip" "dist/TuranBrowser-$v-windows-x64-portable.zip" --installer "dist/TuranBrowser-$v-windows-x64-setup.exe" --json-output 'dist/PACKAGE_INTEGRITY_CI.json'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          # This CI tests a Windows Server runner. It does not certify Windows 10/11,
+          # physical devices, enterprise deployment, or production signing.
+
+      - name: Retain development packages and hashes
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TuranBrowser-windows-x64-engineering-${{ github.run_number }}
+          path: |
+            dist/*.zip
+            dist/*.exe
+            dist/*.txt
+            dist/*.md
+            dist/*.json
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Preserve non-secret test evidence on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: TuranBrowser-failed-engineering-tests-${{ github.run_number }}
+          path: |
+            artifacts/*.json
+            artifacts/*.txt
+            out-cef/Testing/Temporary/LastTest.log
+          if-no-files-found: ignore
+          retention-days: 7

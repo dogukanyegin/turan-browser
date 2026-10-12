@@ -1,0 +1,3 @@
+#define TURAN_FILE_DESCRIPTION "Turan Profile Backup"
+#define TURAN_ORIGINAL_FILENAME "TuranProfileTool.exe"
+#include "turan.rc"

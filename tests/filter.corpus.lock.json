@@ -1,0 +1,21 @@
+{
+  "commit": "a494fcbca03b60c89ccd0c3e989bc9a1d38e93f0",
+  "capturedUtc": "2026-10-10T22:10:33.092099+00:00",
+  "scope": "QA only, not shipped or activated",
+  "lists": {
+    "easylist": {
+      "url": "https://raw.githubusercontent.com/easylist/easylist/a494fcbca03b60c89ccd0c3e989bc9a1d38e93f0/easylist.txt",
+      "sha256": "4f84875522d346167dd9805368894da6e2010af8d868e5354090c9df720d0e53",
+      "size": 2131804,
+      "license": "GPL-3.0-or-later OR CC-BY-SA-3.0-or-later",
+      "licenseUrl": "https://easylist.to/pages/licence.html"
+    },
+    "easyprivacy": {
+      "url": "https://raw.githubusercontent.com/easylist/easylist/a494fcbca03b60c89ccd0c3e989bc9a1d38e93f0/easyprivacy.txt",
+      "sha256": "1f891d48822871ec83315099cd592aba489f939bc69c4f14605edbe969207189",
+      "size": 1508816,
+      "license": "GPL-3.0-or-later OR CC-BY-SA-3.0-or-later",
+      "licenseUrl": "https://easylist.to/pages/licence.html"
+    }
+  }
+}

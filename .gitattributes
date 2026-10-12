@@ -1,0 +1,8 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.gn text eol=lf
+*.yml text eol=lf
+*.patch text eol=lf
+resources/public_suffix_list.dat text eol=lf

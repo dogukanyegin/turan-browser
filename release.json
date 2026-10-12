@@ -1,0 +1,10 @@
+{
+  "version": "0.9.0-beta.1",
+  "major": 0,
+  "minor": 9,
+  "patch": 0,
+  "revision": 1,
+  "channel": "beta",
+  "stable": false,
+  "release_scope": "win11-x64-offline-updates-v1"
+}
